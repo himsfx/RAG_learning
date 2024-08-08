@@ -1,4 +1,4 @@
-pip install pip==19.3.1
+pip==19.3.1
 torch
 langchain
 unstructured
