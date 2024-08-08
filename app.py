@@ -6,9 +6,9 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 #from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from detectron2.config import get_cfg
-from langchain.document_loaders import UnstructuredPDFLoader
+from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain.indexes import VectorstoreIndexCreator
 from langchain_groq import ChatGroq
 # from langchain.llms import OpenAI
@@ -88,7 +88,7 @@ with st.sidebar:
                 embedding=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
                 llm = ChatGroq(groq_api_key="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",model_name=model_name)
                 index = VectorstoreIndexCreator(embedding=embedding).from_loaders(loaders)
-                response = index.query(llm, query)
+                response = index.query(query, llm=llm)
                 st.write(response)
                     
             #st.write(chunks)
