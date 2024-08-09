@@ -4,6 +4,7 @@ langchain
 unstructured
 langchain-community
 langchain-groq
+langchain_huggingface
 unstructured
 #git+https://github.com/facebookresearch/detectron2.git
 layoutparser[layoutmodels,tesseract]
