@@ -2,6 +2,7 @@ pip
 torch
 langchain
 unstructured
+unstructured-inference
 langchain-community
 langchain-groq
 langchain_huggingface
