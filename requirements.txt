@@ -10,6 +10,7 @@ unstructured
 layoutparser[layoutmodels,tesseract]
 pytesseract
 Pillow==9.0.0
+pillow-heif
 pybind11
 chromadb
 Cython
@@ -19,5 +20,3 @@ streamlit==1.18.1
 faiss-cpu==1.7.4
 #streamlit-extras
 python-dotenv
-
-
