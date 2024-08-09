@@ -7,7 +7,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 #from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from detectron2.config import get_cfg
+#from detectron2.config import get_cfg
 from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain.indexes import VectorstoreIndexCreator
 from langchain_groq import ChatGroq
@@ -60,8 +60,8 @@ with st.sidebar:
             length_function=len
             )
 
-            cfg = get_cfg()
-            cfg.MODEL.DEVICE = 'CPU' 
+            # cfg = get_cfg()
+            # cfg.MODEL.DEVICE = 'CPU' 
 
             chunks = text_splitter.split_text(text=text)
 
